@@ -1,6 +1,8 @@
 import Header from "../components/layout/Header";
 import LaunchesTable from "../components/common/LaunchesTable";
 
+// The Header, LaunchesTable, and Footer components are created to modularize the code, which is the purpose of react, dividing everything into smaller components.
+
 const HomeView = () => {
   return (
     <>
