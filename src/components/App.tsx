@@ -1,4 +1,10 @@
+import HomeView from "../views/HomeView";
+
 const App = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <HomeView />
+    </>
+  );
 };
 export default App;
