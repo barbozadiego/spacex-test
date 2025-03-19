@@ -25,7 +25,7 @@ interface Launch {
 const LaunchesTable = () => {
   const { loading, error, data } = useQuery<LaunchData>(GetLaunches);
 
-  if (loading) return <p>Cargando...</p>;
+  if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
   {
@@ -33,26 +33,28 @@ const LaunchesTable = () => {
   }
 
   return (
-    <table className="border border-gray-300">
-      <thead>
-        <tr className="bg-gray-200">
-          <th className="">ID</th>
-          <th className="">LAUNCH DATE</th>
-          <th className="">MISSION NAME</th>
-          <th className="">MISSION ID</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data?.launches?.map((launch: Launch) => (
-          <tr key={launch.id}>
-            <td>{launch.id}</td>
-            <td>{launch.launch_date_utc}</td>
-            <td>{launch.mission_name}</td>
-            <td>{launch.mission_id}</td>
+    <div className="h-[70vh] overflow-auto rounded-md border border-gray-300">
+      <table className="w-full bg-white">
+        <thead className="sticky top-0 z-10">
+          <tr className="bg-gray-200 text-gray-700">
+            <th className="py-2 px-4 text-left">ID</th>
+            <th className="py-2 px-4 text-left">LAUNCH DATE</th>
+            <th className="py-2 px-4 text-left">MISSION NAME</th>
+            <th className="py-2 px-4 text-left">MISSION ID</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {data?.launches?.map((launch: Launch, index) => (
+            <tr key={launch.id} className="border-b border-gray-200">
+              <td className="py-2 px-4">{index + 1}</td>
+              <td className="py-2 px-4">{launch.launch_date_utc}</td>
+              <td className="py-2 px-4">{launch.mission_name}</td>
+              <td className="py-2 px-4">{launch.mission_id}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 export default LaunchesTable;

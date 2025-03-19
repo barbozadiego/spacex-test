@@ -7,7 +7,7 @@ const HomeView = () => {
       <Header />
 
       <div className="px-24">
-        <h1 className="text-2xl font-bold mb-6">🚀 Launches Table</h1>
+        <h1 className="text-2xl text-gray-700 font-bold mb-6">🚀 Launches Table</h1>
         <LaunchesTable />
       </div>
     </>
