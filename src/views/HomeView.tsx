@@ -1,8 +1,16 @@
+import Header from "../components/layout/Header";
+import LaunchesTable from "../components/common/LaunchesTable";
+
 const HomeView = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
+    <>
+      <Header />
+
+      <div className="px-24">
+        <h1 className="text-2xl font-bold mb-6">🚀 Launches Table</h1>
+        <LaunchesTable />
+      </div>
+    </>
   );
 };
 export default HomeView;
