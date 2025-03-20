@@ -40,10 +40,10 @@ const LaunchesTable = () => {
 
   // A basic table is returned with the request data.
   return (
-    <div className="h-[70vh] overflow-auto rounded-md border border-gray-300">
+    <div className="h-[70vh] overflow-auto rounded-md border border-gray-900">
       <table className="w-full bg-white">
         <thead className="sticky top-0 z-10">
-          <tr className="bg-gray-200 text-gray-700">
+          <tr className="bg-gray-950 text-gray-200">
             <th className="py-2 px-4 text-left">ID</th>
             <th className="py-2 px-4 text-left">LAUNCH DATE</th>
             <th className="py-2 px-4 text-left">MISSION NAME</th>
