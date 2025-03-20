@@ -2,6 +2,7 @@ import { useQuery, gql } from "@apollo/client";
 import dayjs from "dayjs";
 import LaunchDetailsModal from "../modals/LaunchDetailsModal";
 import { useState } from "react";
+import LaunchesTableSkeleton from "../skeletons/LaunchesTableSkeleton";
 
 // The GetLaunches constant is created, which will contain the query
 // The gql function is used to process the request text and execute the query.
@@ -38,7 +39,7 @@ const LaunchesTable = () => {
   const [selectedLaunchId, setSelectedLaunchId] = useState<string>("");
   const [showModal, setShowModal] = useState<boolean>(false);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <LaunchesTableSkeleton />;
   if (error) return <p>Error: {error.message}</p>;
 
   // The data is displayed in the console so I can see how the response is structured.
