@@ -5,7 +5,7 @@ interface ShowTableButtonProps {
 
 const ShowTableButton = ({ handleClick }: ShowTableButtonProps) => {
   return (
-    <div className="h-screen flex justify-center items-center">
+    <div className="h-screen flex justify-center items-center px-14">
       <div className="border-2 border-gray-700 py-20 px-14 rounded-2xl">
         <img src="/images/logo.png" alt="logo-spacex" className="w-68 mb-18" />
 

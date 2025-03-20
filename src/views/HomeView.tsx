@@ -22,7 +22,7 @@ const HomeView = () => {
       {showTable ? (
         <>
           <Header />
-          <section className="min-h-[60vh] px-8 md:px-16 lg:px-24 mb-16">
+          <section className="min-h-[60vh] px-8 md:px-16 lg:px-24 mb-10 md:mb-16">
             <h1 className="text-2xl text-gray-900 font-bold mb-6">
               🚀 Launches Table
             </h1>

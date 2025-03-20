@@ -42,14 +42,14 @@ const LaunchesTable = () => {
   return (
    
 
-      <div className="h-[70vh] overflow-auto border border-gray-900">
+      <div className="h-[70vh] overflow-auto rounded-md border border-gray-900">
         <table className="w-full bg-white">
           <thead className="sticky top-0 z-10">
             <tr className="bg-gray-950 text-gray-200">
-              <th className="py-2 px-4 text-left">ID</th>
-              <th className="py-2 px-4 text-left">LAUNCH DATE</th>
-              <th className="py-2 px-4 text-left">MISSION NAME</th>
-              <th className="py-2 px-4 text-left">MISSION ID</th>
+              <th className="py-2 px-4 text-left whitespace-nowrap">ID</th>
+              <th className="py-2 px-4 text-left whitespace-nowrap">LAUNCH DATE</th>
+              <th className="py-2 px-4 text-left whitespace-nowrap">MISSION NAME</th>
+              <th className="py-2 px-4 text-left whitespace-nowrap">MISSION ID</th>
             </tr>
           </thead>
           <tbody>
@@ -65,9 +65,9 @@ const LaunchesTable = () => {
                 {/* I also wanted to show the index to show the table more ordered with the numbering. */}
                 <td className="py-2 px-4">{index + 1}</td>
                 {/* It is worth noting that we use "+ 1" since indexing an array starts at 0 */}
-                <td className="py-2 px-4">{launch.launch_date_utc}</td>
-                <td className="py-2 px-4">{launch.mission_name}</td>
-                <td className="py-2 px-4">{launch.mission_id}</td>
+                <td className="py-2 px-4 whitespace-nowrap">{launch.launch_date_utc}</td>
+                <td className="py-2 px-4 whitespace-nowrap">{launch.mission_name}</td>
+                <td className="py-2 px-4 whitespace-nowrap">{launch.mission_id}</td>
               </tr>
             ))}
           </tbody>
